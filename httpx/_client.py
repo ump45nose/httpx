@@ -617,6 +617,10 @@ class Client(BaseClient):
     * **verify** - *(optional)* Either `True` to use an SSL context with the
     default CA bundle, `False` to disable verification, or an instance of
     `ssl.SSLContext` to use a custom context.
+    * **cert** - *(optional)* An SSL client certificate. Either a file path, or a
+    tuple `(certificate_path, key_path)`.
+    * **http1** - *(optional)* A boolean indicating if HTTP/1.1 support should be
+    enabled. Defaults to `True`.
     * **http2** - *(optional)* A boolean indicating if HTTP/2 support should be
     enabled. Defaults to `False`.
     * **proxy** - *(optional)* A proxy URL where all the traffic should be routed.
@@ -625,6 +629,9 @@ class Client(BaseClient):
     * **limits** - *(optional)* The limits configuration to use.
     * **max_redirects** - *(optional)* The maximum number of redirect responses
     that should be followed.
+    * **follow_redirects** - *(optional)* Enables or disables HTTP redirects.
+    * **event_hooks** - *(optional)* A mapping of event hook names (`"request"`
+    and `"response"`) to lists of callables.
     * **base_url** - *(optional)* A URL to use as the base when building
     request URLs.
     * **transport** - *(optional)* A transport class to use for sending requests
@@ -1331,6 +1338,10 @@ class AsyncClient(BaseClient):
     * **verify** - *(optional)* Either `True` to use an SSL context with the
     default CA bundle, `False` to disable verification, or an instance of
     `ssl.SSLContext` to use a custom context.
+    * **cert** - *(optional)* An SSL client certificate. Either a file path, or a
+    tuple `(certificate_path, key_path)`.
+    * **http1** - *(optional)* A boolean indicating if HTTP/1.1 support should be
+    enabled. Defaults to `True`.
     * **http2** - *(optional)* A boolean indicating if HTTP/2 support should be
     enabled. Defaults to `False`.
     * **proxy** - *(optional)* A proxy URL where all the traffic should be routed.
@@ -1339,6 +1350,9 @@ class AsyncClient(BaseClient):
     * **limits** - *(optional)* The limits configuration to use.
     * **max_redirects** - *(optional)* The maximum number of redirect responses
     that should be followed.
+    * **follow_redirects** - *(optional)* Enables or disables HTTP redirects.
+    * **event_hooks** - *(optional)* A mapping of event hook names (`"request"`
+    and `"response"`) to lists of callables.
     * **base_url** - *(optional)* A URL to use as the base when building
     request URLs.
     * **transport** - *(optional)* A transport class to use for sending requests
