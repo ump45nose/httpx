@@ -100,7 +100,7 @@ what gets sent over the wire.*
 * `def __init__(method, url, [params], [headers], [cookies], [content], [data], [files], [json], [stream])`
 * `.method` - **str**
 * `.url` - **URL**
-* `.content` - **byte**, **byte iterator**, or **byte async iterator**
+* `.content` - **bytes**, **bytes iterator**, or **bytes async iterator**
 * `.headers` - **Headers**
 * `.cookies` - **Cookies**
 
@@ -116,17 +116,21 @@ what gets sent over the wire.*
 
 * `def __init__(url, **kwargs)`
 * `.scheme` - **str**
-* `.authority` - **str**
+* `.userinfo` - **bytes**
+* `.username` - **str**
+* `.password` - **str**
 * `.host` - **str**
-* `.port` - **int**
+* `.raw_host` - **bytes**
+* `.port` - **Optional[int]**
+* `.netloc` - **bytes**
 * `.path` - **str**
-* `.query` - **str**
-* `.raw_path` - **str**
+* `.query` - **bytes**
+* `.params` - **QueryParams**
+* `.raw_path` - **bytes**
 * `.fragment` - **str**
-* `.is_ssl` - **bool**
 * `.is_absolute_url` - **bool**
 * `.is_relative_url` - **bool**
-* `def .copy_with([scheme], [authority], [path], [query], [fragment])` - **URL**
+* `def .copy_with([scheme], [username], [password], [userinfo], [host], [port], [netloc], [path], [query], [raw_path], [fragment], [params])` - **URL**
 
 ## `Headers`
 
