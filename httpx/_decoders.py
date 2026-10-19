@@ -109,10 +109,10 @@ class BrotliDecoder(ContentDecoder):
     """
     Handle 'brotli' decoding.
 
-    Requires `pip install brotlipy`. See: https://brotlipy.readthedocs.io/
-        or   `pip install brotli`. See https://github.com/google/brotli
-    Supports both 'brotlipy' and 'Brotli' packages since they share an import
-    name. The top branches are for 'brotlipy' and bottom branches for 'Brotli'
+    Requires `pip install brotli`. See: https://github.com/google/brotli
+        or   `pip install brotlicffi`. See: https://pypi.org/project/brotlicffi/
+    Supports both 'brotli' and 'brotlicffi' packages since they share an import
+    name. The top branches are for 'brotlicffi' and bottom branches for 'brotli'
     """
 
     def __init__(self) -> None:
